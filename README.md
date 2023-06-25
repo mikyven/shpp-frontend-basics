@@ -1,2 +1,4 @@
 # shpp-frontend-basics
-Repository for 1st level of frontend course by shpp.
+This is repository for 1st level of frontend course by shpp.
+
+There are folders for every level of level. 
