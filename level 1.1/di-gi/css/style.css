@@ -193,7 +193,7 @@ body {
     margin-left: 10%;
     width: 30%;
     font-size: 24px;
-    opacity: 0.8;
+    color: #4A4A4A;
 }
 
 .services-line {
@@ -207,7 +207,7 @@ body {
     margin-left: 10%;
     width: 30%;
     font-size: 18px;
-    opacity: 0.7;
+    color: #797979;
 }
 
 .services-wrapper {
@@ -215,13 +215,87 @@ body {
     align-self: flex-end;
     display: grid;
     width: 50%;
-    grid-template-columns: 17.5% 17.5% 17.5% 17.5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 50% 50%
 }
 
 .services-grid-element {
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 40vh;
+    border: 1px solid var(--secondary);
+    color: #4A4A4A;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.services-grid-element-icon {
+    margin-bottom: 10%;
+}
+
+.services-grid-hidden-elements {
+    opacity: 0;
+    height: 0;
+    letter-spacing: normal;
+    transition: height 0.5s ease, opacity 0.5s ease;
+}
+
+.services-grid-element:hover > .services-grid-hidden-elements {
+    opacity: 1;
+    width: inherit;
+    height: 25%;
+}
+
+.services-grid-element:hover {
+    border: 5px solid var(--primary);
+}
+
+.services-grid-hidden-paragraph {
+    color: #9B9B9B;
+    font-weight: 500;
+    margin: 12.5% 4% 10% 4%;
+}
+
+.services-grid-hidden-anchor {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.projects {
+    height: 100vh;
+    background: linear-gradient(180deg, var(--primary) 0%, #fff 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--secondary);
+    flex-direction: column;
+    color: #fff;
+}
+
+.projects-header {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 1%;
+}
+
+.projects-line {
+    height: 8px;
+    width: 100px;
+    background-color: #fff;
+}
+
+.projects-wrapper {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.projects-portfolio-img {
+    border-radius: 3px;
+}
+
+.projects-portfolio-paragraph {
+    letter-spacing: 2px;
+    color: var(--primary);
 }
