@@ -5,6 +5,10 @@
     --secondary: #F9F6E5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Roboto Condensed, sans-serif;
 }
@@ -398,7 +402,7 @@ hr {
 }
 
 .news {
-    height: 130vh;
+    height: 120vh;
     width: 100%;
     background-color: var(--secondary);
     display: flex;
@@ -407,22 +411,88 @@ hr {
 }
 
 .news-header {
-    margin-top: 5%;
+    color: #4A4A4A;
+    margin: 5% 0 1% 0;
     font-size: 48px;
     font-weight: 400;
+    text-transform: capitalize;
 }
 
 .news-line {
     background-color: var(--primary);
-    margin: 0;
+    margin: 0 0 5% 0;
 }
 
 .news-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
+    display: flex;
+    flex-flow: column wrap;
+    column-gap: 2.5%;
+    height: 75%;
+    width: 62.5%;
+}
+
+.news-grid-element {
+    position: relative;
+    width: 30vh;
+    margin-bottom: 2.5%;
 }
 
 .news-grid-img {
+    width: 100%;
     border-radius: 4px;
+}
+
+.news-grid-element:nth-of-type(4n+1) {order: 1;}
+.news-grid-element:nth-of-type(4n+2) {order: 2;}
+.news-grid-element:nth-of-type(4n+3) {order: 3;}
+.news-grid-element:nth-of-type(4n)   {order: 4;}
+
+.news-grid-caption {
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.news-grid-caption-content {
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+    margin: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 0 0 4px 4px;
+    transition: margin-bottom 0.5s ease;
+}
+
+.news-grid-hidden-element:hover ~ .news-grid-caption > .news-grid-caption-content, .news-grid-caption-content:hover {
+    z-index: 1;
+    background-color: var(--primary);
+    color: var(--secondary);
+    margin-bottom: 12.5%;
+}
+
+.news-grid-hidden-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease
+}
+
+.news-grid-hidden-element:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    border: 10px solid var(--primary);
 }
