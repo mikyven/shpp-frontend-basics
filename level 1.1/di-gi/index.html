@@ -117,7 +117,7 @@
     </div>
   </section>
 
-  <section class="projects">
+  <section id="projects-anchor" class="projects">
     <h1 class="projects-header">Наши проекты</h1>
     <hr class="projects-line"></hr>
     <div class="projects-wrapper">
@@ -152,7 +152,7 @@
     </div>
   </section>
 
-  <section class="video">
+  <section id="video-anchor" class="video">
     <img class="video-img" src="images/video-img.jpg">
     <div class="video-content">
       <h1 class="video-header">Команда</h1>
@@ -169,9 +169,9 @@
     </div>
   </section>
 
-  <section class="news">
+  <section id="news-anchor" class="news">
     <h1 class="news-header">Последние новости</h1>
-    <hr class="news-line">
+    <figure class="news-line"></figure>
     <div class="news-wrapper">
       <div class="news-grid-element">
         <div class="news-grid-hidden-element">
@@ -247,6 +247,87 @@
       </div>
     </div>
   </section>
+
+  <section class="testimonial">
+    <figure>
+      <i class="fa-solid fa-quote-right fa-3x testimonial-quotes"></i>
+      <blockquote class="testimonial-quote">
+        Если нужно создавать либо повышать имидж компании, 
+        то <span class="testimonial-quote-span">диджитал-маркетинг</span> является наиболее подходящим
+      </blockquote>
+      <figcaption class="testimonial-caption">- Маргарита Акулич</figcaption>
+    </figure>
+    <section class="testimonial-pagination">
+      <button class="testimonial-pagination-element"></button>
+      <button id="active" class="testimonial-pagination-element"></button>
+      <button class="testimonial-pagination-element"></button>
+    </section>
+  </section>
+
+  <footer class="footer">
+    <figure class="footer-logo-section">
+      <figure class="footer-logo">
+        <img src="images/di-gi-logo.png">
+      </figure>
+    </figure>
+    <section class="footer-content">
+      <p class="footer-paragraph">
+        Мы хотели бы услышать все о вашем проекте.<br>
+        Свяжись с нами.
+      </p>
+      <section class="footer-sm">
+        <div class="footer-sm-section footer-facebook">
+          <a href="https://www.facebook.com/" target="_blank" class="footer-sm-anchor">
+            <i class="fa-brands fa-facebook-f fa-2x"></i>
+          </a>
+        </div>
+        <div class="footer-sm-section footer-google-plus">
+          <a href="https://www.google.com/" target="_blank" class="footer-sm-anchor">
+            <i class="fa fa-google-plus fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="footer-sm-section footer-twitter">
+          <a href="https://twitter.com/" target="_blank" class="footer-sm-anchor">
+            <i class="fa-brands fa-twitter fa-2x"></i>
+          </a>
+        </div>
+        <div class="footer-sm-section footer-pinterest">
+          <a href="https://www.pinterest.com/" target="_blank" class="footer-sm-anchor">
+            <i class="fa-brands fa-pinterest fa-2x"></i>
+          </a>
+        </div>
+      </section>
+      <section class="footer-info">
+        <div class="footer-info-section footer-contacts">
+          <p class="footer-info-paragraph">Контакты</p>
+          <a class="footer-info-anchor" href="tel:+805555566">+80 555 55 66</a>
+          <a class="footer-info-anchor" href="mailto:digi@gmail.com">digi@gmail.com</a>
+        </div>
+        <div class="footer-info-section footer-address">
+          <p class="footer-info-paragraph">Адрес</p>
+          <a class="footer-info-anchor" href="#">Пр. Науки 107<br>Киев / Украина</a>
+        </div>
+        <div class="footer-info-section footer-help">
+          <p class="footer-info-paragraph">Помощь</p>
+          <a class="footer-info-anchor" href="#">Как с нами связаться?</a>
+          <a class="footer-info-anchor" href="#">Что такое диджитал?</a>
+          <a class="footer-info-anchor" href="#">Стоимость услуг</a>
+        </div>
+        <div class="footer-info-section footer-menu">
+          <p class="footer-info-paragraph">Меню</p>
+          <a class="footer-info-anchor" href="#projects-anchor">Наши проекты</a>
+          <a class="footer-info-anchor" href="#video-anchor">Команда</a>
+          <a class="footer-info-anchor" href="#news-anchor">Блог</a>
+        </div>
+      </section>
+    </section>
+    <div class="footer-up">
+      <a href="#" class="footer-up-content">
+        <p class="footer-up-paragraph">Вверх</p>
+        <i class="footer-up-arrow fa-solid fa-angle-up fa-2x"></i>
+      </a>
+    </div>
+  </footer>
 
   <script src="https://kit.fontawesome.com/5c1413da0e.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
