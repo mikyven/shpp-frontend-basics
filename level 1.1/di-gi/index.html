@@ -25,11 +25,11 @@
       ПОДРОБНЕЕ
     </button>
     <div class="intro-space-for-pagination"></div>
-    <ul class="intro-pagination">
-      <li class="intro-pagination-element"></li>
-      <li id="active" class="intro-pagination-element"></li>
-      <li class="intro-pagination-element"></li>
-    </ul>
+    <section class="intro-pagination">
+      <button class="intro-pagination-element"></button>
+      <button id="active" class="intro-pagination-element"></button>
+      <button class="intro-pagination-element"></button>
+    </section>
     <nav class="intro-carousel">
       <button class="intro-carousel-button"><i class="fa-solid fa-angle-left fa-2x"></i></button>
       <button class="intro-carousel-button"><i class="fa-solid fa-angle-right fa-2x"></i></button>
@@ -44,11 +44,13 @@
   </section>
 
   <section class="services">
-    <h1 class="services-header">Сервис</h1>
-    <p class="services-main-paragraph">От идеи до незабываемого и измеримого результата.</p>
-    <hr class="services-line"></hr>
-    <p class="services-second-paragraph">Интеграция безупречного производства, передовых технологий и 
-      тщательного измерения производительности</p>
+    <section class="services-content">
+      <h1 class="services-header">Сервис</h1>
+      <p class="services-main-paragraph">От идеи до незабываемого и измеримого результата.</p>
+      <hr class="services-line"></hr>
+      <p class="services-second-paragraph">Интеграция безупречного производства, передовых технологий и 
+        тщательного измерения производительности</p>
+    </section>
     <div class="services-wrapper">
       <div class="services-grid-element">
         <img class="services-grid-element-icon" src="images/services_icon_1.png">
@@ -121,129 +123,143 @@
     <h1 class="projects-header">Наши проекты</h1>
     <hr class="projects-line"></hr>
     <div class="projects-wrapper">
-      <div class="projects-elements"> 
-        <div class="projects-hidden-elements">
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
-        </div>
+      <div class="projects-grid-element"> 
+        <figure class="projects-grid-figure">
+          <div class="projects-hidden-grid-element">
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
+          </div>
+          <img class="projects-grid-img" src="images/projects-img-1.png">
+        </figure>
+        <p class="projects-grid-paragraph">Lalique бутик</p>
       </div>
-      <div class="projects-elements">
-        <div class="projects-hidden-elements">
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
-        </div>
+      <div class="projects-grid-element">
+        <figure class="projects-grid-figure">
+          <div class="projects-hidden-grid-element">
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
+          </div>
+          <img class="projects-grid-img" src="images/projects-img-2.png">
+        </figure>
+        <p class="projects-grid-paragraph">Строительство домов</p>
       </div>
-      <div class="projects-elements">
-        <div class="projects-hidden-elements">
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
-        </div>
+      <div class="projects-grid-element">
+        <figure class="projects-grid-figure">
+          <div class="projects-hidden-grid-element">
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
+          </div>
+          <img class="projects-grid-img" src="images/projects-img-3.png">
+        </figure>
+        <p class="projects-grid-paragraph">Кофейня</p>
       </div>
-      <div class="projects-elements">
-        <div class="projects-hidden-elements">
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
-          <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
-        </div>
+      <div class="projects-grid-element">
+        <figure class="projects-grid-figure">
+          <div class="projects-hidden-grid-element">
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-info-icon.svg"></a>
+            <a class="projects-hidden-img-anchor" href="#"><img src="images/projects-search-icon.svg"></a>
+          </div>
+          <img class="projects-grid-img" src="images/projects-img-4.png">
+        </figure>
+        <p class="projects-grid-paragraph">Уникальные туры</p>
       </div>
-      <p class="projects-portfolio-paragraph">Lalique бутик</p>
-      <p class="projects-portfolio-paragraph">Строительство домов</p>
-      <p class="projects-portfolio-paragraph">Кофейня</p>
-      <p class="projects-portfolio-paragraph">Уникальные туры</p>
     </div>
   </section>
 
   <section id="video-anchor" class="video">
-    <img class="video-img" src="images/video-img.jpg">
     <div class="video-content">
-      <h1 class="video-header">Команда</h1>
-      <hr class="video-line">
-      <p class="video-paragraph">Наша команда - это наша самая большая ценность. 
-        Мы трудились, чтобы собрать группу  экспертов,
-         чьи навыки дополняют друг друга. 
-        У членов нашей команды разные истории, но мы разделяем общую 
-        страсть к идеалу. Мы верим, чтобы оставаться
-        профессионалом, нужно развиваться, 
-        поэтому мы постоянно ищем способы, как стать лучше 
-        в том, что мы делаем.</p>
-      <button class="video-button">СМОТРЕТЬ ВИДЕО</button>
+      <img class="video-img" src="images/video-img.jpg">
+      <div class="video-text-content">
+        <h1 class="video-header">Команда</h1>
+        <hr class="video-line">
+        <p class="video-paragraph">Наша команда - это наша самая большая ценность. 
+          Мы трудились, чтобы собрать группу  экспертов,
+          чьи навыки дополняют друг друга. 
+          У членов нашей команды разные истории, но мы разделяем общую 
+          страсть к идеалу. Мы верим, чтобы оставаться
+          профессионалом, нужно развиваться, 
+          поэтому мы постоянно ищем способы, как стать лучше 
+          в том, что мы делаем.</p>
+        <button class="video-button">СМОТРЕТЬ ВИДЕО</button>
+      </div>
     </div>
   </section>
 
   <section id="news-anchor" class="news">
     <h1 class="news-header">Последние новости</h1>
     <figure class="news-line"></figure>
-    <div class="news-wrapper">
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">
+    <div class="news-masonry-wrapper">
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">
           <a href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">3Д в брендинге</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">3Д в брендинге</p>
         </div>
-        <img class="news-grid-img" src="images/news-1.jpg">
+        <img class="news-masonry-img" src="images/news-1.jpg">
       </div>
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">          
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">          
           <a href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">Контекстная реклама</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">Контекстная реклама</p>
         </div>
-        <img class="news-grid-img" src="images/news-2.jpg">
+        <img class="news-masonry-img" src="images/news-2.jpg">
       </div>
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">
           <a href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">Графика</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">Графика</p>
         </div>
-        <img class="news-grid-img" src="images/news-3.jpg">
+        <img class="news-masonry-img" src="images/news-3.jpg">
       </div>
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">
           <a href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">Корпоративная культура</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">Корпоративная культура</p>
         </div>
-        <img class="news-grid-img" src="images/news-4.jpg">
+        <img class="news-masonry-img" src="images/news-4.jpg">
       </div>
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">
-          <a href="#"><img src="images/news-info-icon.svg"></a>
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">
+          <a class="news-masonry-hidden-icon" href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">Уникальный дизайн</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">Уникальный дизайн</p>
         </div>
-        <img class="news-grid-img" src="images/news-5.jpg">
+        <img class="news-masonry-img" src="images/news-5.jpg">
       </div>
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">
           <a href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">Взгляд со стороны</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">Взгляд со стороны</p>
         </div>
-        <img class="news-grid-img" src="images/news-6.jpg">
+        <img class="news-masonry-img" src="images/news-6.jpg">
       </div>
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">
           <a href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">Соц сети и их польза</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">Соц сети и их польза</p>
         </div>
-        <img class="news-grid-img" src="images/news-7.jpg">
+        <img class="news-masonry-img" src="images/news-7.jpg">
       </div>
-      <div class="news-grid-element">
-        <div class="news-grid-hidden-element">
+      <div class="news-masonry-element">
+        <div class="news-masonry-hidden-element">
           <a href="#"><img src="images/news-info-icon.svg"></a>
         </div>
-        <div class="news-grid-caption">
-          <p class="news-grid-caption-content">Эксклюзивность</p>
+        <div class="news-masonry-caption">
+          <p class="news-masonry-caption-content">Эксклюзивность</p>
         </div>
-        <img class="news-grid-img" src="images/news-8.jpg">
+        <img class="news-masonry-img" src="images/news-8.jpg">
       </div>
     </div>
   </section>
