@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: https://ogp.me/ns#">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta property="og:title" content="Di Gi - диджитал агенство">
+  <meta property="og:description" content="Диджитал агентство полного цикла, 
+  направленное на самый лучший результат наших клиентов в маркетинге, продажах и управлении">
+  <meta property="og:url" content="https://ca7a-188-163-24-192.ngrok-free.app">
+  <meta property="og:image" content="https://4cf2-188-163-24-192.ngrok-free.app/images/bg-img.jpg">
+  <title>Di Gi | Диджитал агенство</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
 </head>
 <body>
   <header class="header">
@@ -16,25 +24,35 @@
     </button>
   </header>
 
-  <main class="intro">
-    <h1 class="intro-header">МЫСЛИ<br>ГЛОБАЛЬНО</h1>
-    <p class="intro-paragraph">Di Gі - это диджитал агентство полного цикла, 
-      направленное на самый лучший результат наших клиентов в маркетинге, продажах и управлении
-    </p>
-    <button class="intro-more-button">
-      ПОДРОБНЕЕ
-    </button>
-    <div class="intro-space-for-pagination"></div>
-    <section class="intro-pagination">
-      <button class="intro-pagination-element"></button>
-      <button id="active" class="intro-pagination-element"></button>
-      <button class="intro-pagination-element"></button>
-    </section>
-    <nav class="intro-carousel">
-      <button class="intro-carousel-button"><i class="fa-solid fa-angle-left fa-2x"></i></button>
-      <button class="intro-carousel-button"><i class="fa-solid fa-angle-right fa-2x"></i></button>
-    </nav>
-  </main>
+  <div class="owl-carousel owl-theme">
+    <main class="intro">
+      <h1 class="intro-header">МЫСЛИ<br>ГЛОБАЛЬНО</h1>
+      <p class="intro-paragraph">Di Gі - это диджитал агентство полного цикла, 
+        направленное на самый лучший результат наших клиентов в маркетинге, продажах и управлении
+      </p>
+      <button class="intro-more-button">
+        ПОДРОБНЕЕ
+      </button>
+    </main>
+    <main class="intro mars">
+      <h1 class="intro-header">МЫСЛИ<br>ОРИГИНАЛЬНО</h1>
+      <p class="intro-paragraph">Di Gі - это диджитал агентство полного цикла, 
+        направленное на самый лучший результат наших клиентов в маркетинге, продажах и управлении
+      </p>
+      <button class="intro-more-button">
+        ПОДРОБНЕЕ
+      </button>
+    </main>
+    <main class="intro pluto">
+      <h1 class="intro-header">МЫСЛИ<br>НЕРЕАЛЬНО</h1>
+      <p class="intro-paragraph">Di Gі - это диджитал агентство полного цикла, 
+        направленное на самый лучший результат наших клиентов в маркетинге, продажах и управлении
+      </p>
+      <button class="intro-more-button">
+        ПОДРОБНЕЕ
+      </button>
+    </main>
+  </div>
 
   <section class="promo">
     <h1 class="promo-header">Вы полюбите нас с первой встречи!</h1>
@@ -232,7 +250,7 @@
       </div>
       <div class="news-masonry-element">
         <div class="news-masonry-hidden-element">
-          <a class="news-masonry-hidden-icon" href="#"><img src="images/news-info-icon.svg"></a>
+          <a class="news-masonry-hidden-icon-1" href="#"><img src="images/news-info-icon.svg"></a>
         </div>
         <div class="news-masonry-caption">
           <p class="news-masonry-caption-content">Уникальный дизайн</p>
@@ -250,7 +268,7 @@
       </div>
       <div class="news-masonry-element">
         <div class="news-masonry-hidden-element">
-          <a href="#"><img src="images/news-info-icon.svg"></a>
+          <a href="#" class="news-masonry-hidden-icon-2"><img src="images/news-info-icon.svg"></a>
         </div>
         <div class="news-masonry-caption">
           <p class="news-masonry-caption-content">Соц сети и их польза</p>
@@ -269,19 +287,30 @@
     </div>
   </section>
 
-  <section class="testimonial">
+  <div class="owl-carousel second-carousel">
+    <section class="testimonial">
+        <i class="fa-solid fa-quote-right fa-3x testimonial-quotes"></i>
+        <blockquote class="testimonial-quote">
+          Если нужно создавать либо повышать имидж компании, 
+          то <span class="testimonial-quote-span">диджитал-маркетинг</span> является наиболее подходящим
+        </blockquote>
+        <figcaption class="testimonial-caption">- Маргарита Акулич</figcaption>
+    </section>
+    <section class="testimonial">
       <i class="fa-solid fa-quote-right fa-3x testimonial-quotes"></i>
       <blockquote class="testimonial-quote">
-        Если нужно создавать либо повышать имидж компании, 
-        то <span class="testimonial-quote-span">диджитал-маркетинг</span> является наиболее подходящим
+        Никогда не ошибается тот, кто <span class="testimonial-quote-span">ничего</span> не делает.
       </blockquote>
-      <figcaption class="testimonial-caption">- Маргарита Акулич</figcaption>
-    <section class="testimonial-pagination">
-      <button class="testimonial-pagination-element"></button>
-      <button id="active" class="testimonial-pagination-element"></button>
-      <button class="testimonial-pagination-element"></button>
+      <figcaption class="testimonial-caption">- Теодор Рузвельт</figcaption>
     </section>
-  </section>
+    <section class="testimonial">
+      <i class="fa-solid fa-quote-right fa-3x testimonial-quotes"></i>
+      <blockquote class="testimonial-quote">
+        Мы находимся здесь, чтобы внести свой вклад в этот мир. <br> 
+        <span class="testimonial-quote-span">Иначе зачем мы здесь?</span>
+      </blockquote>
+      <figcaption class="testimonial-caption">- Стив Джобс</figcaption>
+  </div>
 
   <footer class="footer">
     <figure class="footer-logo-section">
@@ -350,6 +379,8 @@
 
   <script src="https://kit.fontawesome.com/5c1413da0e.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
+  <script></script>
 </body>
 </html>
