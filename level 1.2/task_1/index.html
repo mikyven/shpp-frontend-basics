@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div id="first_div"></div>
+        <button id="hide_button_with_css">display: none</button>
+        <button id="hide_button_with_js">JS remove</button>
+        <button id="hide_button_with_css_and_js">.hidden + display: none</button>
+        <button id="hide_or_show_button" class="first">hide or show div</button>
+    </section>
+
+    <section>
+        <section class="block_row">
+            <div class="black_div"></div>
+            <div class="black_div"></div>
+            <div class="black_div"></div>
+            <div class="black_div"></div>
+            <div class="black_div"></div>
+        </section>
+        <button id="hide_or_show_button" class="second">hide or show all divs</button>
+    </section>
+
+    <section>
+        <section class="block_row third">
+            <div class="black_div third"></div>
+            <div class="black_div third"></div>
+            <div class="black_div third"></div>
+            <div class="black_div third"></div>
+            <div class="black_div third"></div>
+        </section>
+        <section id="selector_form">
+            <input type="text" name="selector" id="selector_input" placeholder="enter selector here">
+            <button id="selector_submit">hide or show element</button>
+        </section>
+    </section>
+
+    <section>
+        <div id="yellow_div"></div>
+    </section>
+
+    <section>
+        <div id="red_div" class="hidden"></div>
+        <button id="button_under_red_div">hover over me!</button>
+    </section>
+
+    <section>
+        <div id="green_div" class="hidden"></div>
+        <input type="text" id="input_under_green_div" placeholder="enter something">
+    </section>
+
+    <section>
+        <section id="image_form">
+            <textarea id="image_input" placeholder="enter image url"></textarea>
+            <button id="image_button">click to see your images</button>
+        </section>
+    </section>
+
+    <section>
+        <p id="cursor_x">X:</p>
+        <p id="cursor_y">Y:</p>
+        <p id="language">lang:</p>
+        <p id="latitude"></p>
+        <p id="longitude"></p>
+    </section>
+
+    <section>
+        <div id="first_editable_div" contenteditable="true">
+            you can edit this div
+        </div>
+        <div id="second_editable_div" contenteditable="true">
+            and this div
+        </div>
+        <div id="third_editable_div" contenteditable="true">
+            and this div
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
