@@ -20,6 +20,7 @@ let longitude = document.getElementById("longitude")
 let firstEditableDiv = document.getElementById("first_editable_div")
 let secondEditableDiv = document.getElementById("second_editable_div")
 let thirdEditableDiv = document.getElementById("third_editable_div")
+let upButton = document.getElementById("up_button")
 
 hideButtonWithCSS.onclick = () => firstBlackDiv.style.display = "none"
 
@@ -133,10 +134,22 @@ checkGeolocation = () => {
 
 firstEditableDiv.oninput = () => localStorage.setItem("firstDiv", firstEditableDiv.innerHTML)
 
-// secondEditableDiv.oninput = () => document.cookie = `secondDiv=${secondEditableDiv.innerHTML}`
+secondEditableDiv.oninput = () => document.cookie = `${secondEditableDiv.innerHTML}`
+
+thirdEditableDiv.oninput = () => sessionStorage.setItem("thirdDiv", thirdEditableDiv.innerHTML)
 
 onload = () => {
     // checkGeolocation()
     firstEditableDiv.innerHTML = localStorage.getItem("firstDiv")
-    // secondEditableDiv.innerHTML = document.cookie
+    document.cookie &&= secondEditableDiv.innerHTML = document.cookie
+    thirdEditableDiv.innerHTML = sessionStorage.getItem("thirdDiv")
+}
+
+onscroll = () => {
+    scrollY < (document.body.scrollHeight - window.innerHeight - 2) && upButton.classList.add("hidden")
+    scrollY >= (document.body.scrollHeight - window.innerHeight - 2) && upButton.classList.remove("hidden")
+}
+
+upButton.onclick = () => {
+    scrollTo(0, 0)
 }
