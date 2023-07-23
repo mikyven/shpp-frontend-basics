@@ -86,10 +86,32 @@
 
     <section>
         <div id="outer_div">
-            <div id="inner_div">
-
-            </div>
+            <div id="inner_div"></div>
         </div>
+    </section>
+
+    <section>
+        <button id="noscroll_rectangle_button">
+            show noscroll rectangle
+        </button>
+        <div id="noscroll_rectangle" class="hidden"></div>
+    </section>
+
+    <section>
+        <form>
+            <input type="submit" value="GO">
+        </form>
+    </section>
+
+    <section>
+        <form id="nice_file_form">
+            <input id="nice_file_input" type="file" multiple>
+            <img id="nice_file_upload_img" src="upload_icon.png">
+            <label for="nice_file_input" id="nice_file_input_label">
+                <span>Choose File</span> or Drag it
+            </label>
+            <p id="nice_file_result"></p>
+        </form>
     </section>
 
     <script src="script.js"></script>

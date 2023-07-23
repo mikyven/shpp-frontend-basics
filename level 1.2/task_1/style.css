@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
@@ -63,6 +65,14 @@ body > section {
     width: 100px;
 }
 
+section:nth-child(5) {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
 #red_div {
     align-self: center;
     margin-bottom: 10px;
@@ -72,6 +82,7 @@ body > section {
 }
 
 #button_under_red_div {
+    margin-top: 60px;
     width: 90px;
     align-self: center;
 }
@@ -157,4 +168,64 @@ section:nth-child(11) {
     height: 125px;
     width: 125px;
     background-color: green;
+}
+
+#noscroll_rectangle_button {
+    align-self: center;
+    width: 150px;
+}
+
+#noscroll_rectangle {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+section:nth-child(13) > form {
+    align-self: center
+}
+
+section:nth-child(14) > form{
+    box-sizing: border-box;
+    border: 5px dashed #5f5f5f;
+    border-radius: 10px;
+    background-color: gray;
+    width: 400px;
+    height: 200px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: backround-color 0.5s ease, border-color 0.5s ease;
+}
+
+#nice_file_input {
+    display: none;
+}
+
+#nice_file_input + img {
+    margin-bottom: 15px;
+}
+
+#nice_file_input_label {
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+#nice_file_input_label > span {
+    color:#143aa0;
+    cursor: pointer;
+}
+
+#nice_file_result {
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    display: none;
 }

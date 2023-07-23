@@ -21,6 +21,15 @@ let firstEditableDiv = document.getElementById("first_editable_div")
 let secondEditableDiv = document.getElementById("second_editable_div")
 let thirdEditableDiv = document.getElementById("third_editable_div")
 let upButton = document.getElementById("up_button")
+let outerDiv = document.getElementById("outer_div")
+let innerDiv = document.getElementById("inner_div")
+let noScrollRectangleButton = document.getElementById("noscroll_rectangle_button")
+let noScrollRectangle = document.getElementById("noscroll_rectangle")
+let niceFileForm = document.getElementById("nice_file_form")
+let niceFileInput = document.getElementById("nice_file_input")
+let niceFileInputLabel = document.getElementById("nice_file_input_label")
+let niceFileUploadImg = document.getElementById("nice_file_upload_img")
+let niceFileResult = document.getElementById("nice_file_result")
 
 hideButtonWithCSS.onclick = () => firstBlackDiv.style.display = "none"
 
@@ -89,9 +98,15 @@ yellowDiv.onclick = () => {
     }
 }
 
-buttonUnderRedDiv.onmouseover = () => redDiv.classList.remove("hidden")
+buttonUnderRedDiv.onmouseover = () => {
+    redDiv.classList.remove("hidden")
+    buttonUnderRedDiv.style.marginTop = 0
+}
 
-buttonUnderRedDiv.onmouseout = () => redDiv.classList.add("hidden")
+buttonUnderRedDiv.onmouseout = () => {
+    redDiv.classList.add("hidden")
+    buttonUnderRedDiv.style.marginTop = "60px"
+}
 
 inputUnderGreenDiv.onfocus = () => greenDiv.classList.remove("hidden")
 
@@ -132,17 +147,18 @@ checkGeolocation = () => {
 }
 
 
+
 firstEditableDiv.oninput = () => localStorage.setItem("firstDiv", firstEditableDiv.innerHTML)
-
-secondEditableDiv.oninput = () => document.cookie = `${secondEditableDiv.innerHTML}`
-
+secondEditableDiv.oninput = () => document.cookie = `secondDiv=${secondEditableDiv.innerHTML}`
 thirdEditableDiv.oninput = () => sessionStorage.setItem("thirdDiv", thirdEditableDiv.innerHTML)
 
 onload = () => {
     // checkGeolocation()
     firstEditableDiv.innerHTML = localStorage.getItem("firstDiv")
-    document.cookie &&= secondEditableDiv.innerHTML = document.cookie
+    document.cookie &&= secondEditableDiv.innerHTML = document.cookie.split("=")[1]
     thirdEditableDiv.innerHTML = sessionStorage.getItem("thirdDiv")
+    niceFileResult.style.display = "none"
+    niceFileInput.value = ""
 }
 
 onscroll = () => {
@@ -152,4 +168,75 @@ onscroll = () => {
 
 upButton.onclick = () => {
     scrollTo(0, 0)
+}
+
+outerDiv.addEventListener("click", () => alert("you clicked on outer div"))
+
+innerDiv.addEventListener("click", (e) => {
+    e.stopPropagation()
+    alert("you clicked on inner div")
+})
+
+noScrollRectangleButton.onclick = () => {
+    noScrollRectangle.classList.remove("hidden")
+}
+
+noScrollRectangle.onmouseover = () => {
+    if (!noScrollRectangle.classList.contains("hidden")) {
+        console.log(1)
+        document.body.style.overflow = "hidden"
+    }
+}
+
+noScrollRectangle.onclick = () => {
+    noScrollRectangle.classList.add("hidden")
+    document.body.style.overflow = "visible"
+}
+
+document.querySelector("section:nth-child(13) > form").onsubmit = () => {
+    return false
+}
+
+niceFileForm.ondragover = (e) => {
+    e.preventDefault()
+    niceFileForm.style.backgroundColor = "#4d4d4d"
+    niceFileForm.style.borderColor = "#999999"
+    document.querySelector("#nice_file_input_label > span").style.color = "#1d56f0"
+}
+
+niceFileForm.ondragleave = (e) => {
+    e.preventDefault()
+    niceFileForm.style.backgroundColor = "gray"
+    niceFileForm.style.borderColor = "#5f5f5f"
+}
+
+niceFileForm.ondrop = (e) => {
+    e.preventDefault()
+    niceFileUploadImg.style.display = "none"
+    niceFileForm.style.backgroundColor = "gray"
+    niceFileForm.style.borderColor = "#5f5f5f"
+    niceFileInputLabel.style.display = "none"
+    niceFileResult.style.display = "block"
+    document.querySelector("#nice_file_input_label > span").style.color = "#143aa0"
+    let files = e.dataTransfer.files
+    console.log(files)
+    if (files.length > 1) {
+        niceFileResult.innerHTML = `You have dragged ${files.length} files`
+    }
+    else {
+        niceFileResult.innerHTML = `You have dragged ${files[0].name}`
+    }
+}
+
+niceFileForm.onchange = () => {
+    niceFileUploadImg.style.display = "none"
+    niceFileInputLabel.style.display = "none"
+    niceFileResult.style.display = "block"
+    files = niceFileInput.files
+    if (files.length > 1) {
+        niceFileResult.innerHTML = `You have chosen ${files.length} files`
+    }
+    else {
+        niceFileResult.innerHTML = `You have chosen ${files[0].name}`
+    }
 }
