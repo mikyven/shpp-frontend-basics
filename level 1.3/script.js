@@ -1,5 +1,6 @@
 function DataTable(config, data) {
     let parent = document.querySelector(config.parent)
+    if (parent.children.length > 0) return
     let table = document.createElement("table")
     let head = document.createElement("thead")
     let body = document.createElement("tbody")
@@ -11,20 +12,39 @@ function DataTable(config, data) {
         let th = document.createElement("th")
         i == 0 ? th.innerHTML = "№" : 
         th.innerHTML = config.columns[i - 1].title
+        i == 0 ? th.id = "number" : 
+        th.id = config.columns[i - 1].value
         head.appendChild(th)
     }
 
     data.map(function (i) {
         let tr = document.createElement("tr")
+        tr.id = i.id
         body.appendChild(tr)
-        for (let j = 0; j < config.columns.length + 1; j++) {
+        let td = document.createElement("td")
+        td.innerHTML = data.indexOf(i) + 1
+        td.id = "number"
+        tr.appendChild(td)
+        let filteredEntries = Object.entries(i)
+        .filter(j => config.columns.some(k => k.value == j[0]) ? j : false)
+        config.columns.map(function (k) {
             let td = document.createElement("td")
             tr.appendChild(td)
-            if (j == 0) td.innerHTML = data.indexOf(i) + 1
-            else {
-                let values = []
-                config.columns.map(i => values[config.columns.indexOf(i)] = i.value)
-            }
+            filteredEntries[config.columns.indexOf(k)][0] == k.value ? 
+            td.innerHTML = filteredEntries[config.columns.indexOf(k)][1] :
+            td.innerHTML = undefined
+            td.id = k.value
+        })
+    })
+
+    Array.from(table.children[0].children).map(function (i) {
+        i.onclick = () => {
+            let elementsArr = Array.from(document.querySelectorAll(`td#${i.id}`))
+            
+            let arr = elementsArr.map(i => i = i.innerHTML)
+            elementsArr.map(i => {
+                i.innerHTML = arr[arr.length - elementsArr.indexOf(i) - 1]
+            })
         }
     })
 }
@@ -37,10 +57,23 @@ const config1 = {
         {title: 'Вік', value: 'age'},
     ]
 };
+
+const config2 = {
+    parent: '#usersTable',
+    columns: [
+        {title: 'Каша', value: 'name'},
+        {title: 'Вік', value: 'age'},
+    ]
+};
+
+const users2 = [
+    {id: 30050, name: 'Вася', surname: 'Петров', age: 35},
+    {id: 30051, name: 'Вася', surname: 'Васечкін', age: 14},
+];
  
 const users = [
     {id: 30050, name: 'Вася', surname: 'Петров', age: 12},
     {id: 30051, name: 'Вася', surname: 'Васечкін', age: 15},
 ];
  
-DataTable(config1, users);
+DataTable(config1, users)

@@ -1,11 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+@import  "~/tabulator-tables/dist/css/tabulator.min.css";
+
 body {
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    flex-direction: column;
+}
+
+#usersTable {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    justify-content: center;
+    margin: 50px 0;
 }
 
 table {
@@ -20,7 +31,23 @@ table {
 thead {
     background-color: rgb(173, 173, 173);
     color: rgb(255, 255, 255);
-    
+}
+
+th:hover{
+    background-color: rgb(128, 128, 128)
+}
+
+tr:hover {
+    background-color: rgb(207, 207, 207);
+}
+
+th {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 th, td{
