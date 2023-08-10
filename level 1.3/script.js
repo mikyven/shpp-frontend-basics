@@ -36,17 +36,6 @@ function DataTable(config, data) {
             td.id = k.value
         })
     })
-
-    Array.from(table.children[0].children).map(function (i) {
-        i.onclick = () => {
-            let elementsArr = Array.from(document.querySelectorAll(`td#${i.id}`))
-            
-            let arr = elementsArr.map(i => i = i.innerHTML)
-            elementsArr.map(i => {
-                i.innerHTML = arr[arr.length - elementsArr.indexOf(i) - 1]
-            })
-        }
-    })
 }
  
 const config1 = {
@@ -57,19 +46,6 @@ const config1 = {
         {title: 'Вік', value: 'age'},
     ]
 };
-
-const config2 = {
-    parent: '#usersTable',
-    columns: [
-        {title: 'Каша', value: 'name'},
-        {title: 'Вік', value: 'age'},
-    ]
-};
-
-const users2 = [
-    {id: 30050, name: 'Вася', surname: 'Петров', age: 35},
-    {id: 30051, name: 'Вася', surname: 'Васечкін', age: 14},
-];
  
 const users = [
     {id: 30050, name: 'Вася', surname: 'Петров', age: 12},
